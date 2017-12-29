@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block main %}
+<div class='header'>MyBlog列表</div>
+<div class='top'>
+	<div class="container">
+        {% for blg in blog %}
+            <div><a href={% url 'blog' %} >{{ blg.title }}</a></div>
+        {% endfor %}
+	</div>
+</div>
+{% endblock %}

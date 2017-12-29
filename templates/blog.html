@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class='header'>MyBlog</div>
+<div class='top'>
+    {% for blog in blogs   %}
+        <div><span class='sp'>标题</span></div>
+       <a href={% url 'detail' blog.pk %} >{{ blog.title }}</a>
+        <div><span>详情</span></div>
+        {{ blog.context }}
+        <div><span>创建时间</span></div>
+        {{ blog.created }}
+        <div><span>作者</span></div>
+        {{ blog.user }}
+        <br>
+    {% endfor %}
+</div>
+{% endblock %}

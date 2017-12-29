@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block main %}
+	<div class="container">
+        {% for blog in blog1s %}
+		<div id="one">标--题--{{ blog.title}}</div>
+ 		<div id="one">作者{{ blog.user }}</div>
+		<div id="one">内容{{ blog.context }}</div>
+        {% endfor %}
+	</div>
+{% endblock %}
